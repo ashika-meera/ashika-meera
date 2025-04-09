@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #5b0466;
+}
+
+body{
+    background: rgb(33,33,34);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    background: rgb(0, 3, 8);
+    border-radius: 50%;
+    padding: 10px;
+    outline: 10px solid #3b3831;
+    outline-offset: 5px;
+    box-shadow: 0 0 80px rgb(65, 3, 56);
+}
+
+.clock{
+    position: relative;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid #5858581f;
+    outline: 10px solid rgb(5, 15, 32);
+    outline-offset: -20px;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--j)));
+    inset: 20px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--j)));
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 900;
+    height: 50px;
+    width: 50px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i{
+    position: absolute;
+    background: var(--clr);
+    height: var(--ht);
+    width: var(--wt);
+    z-index: 0;
+}
